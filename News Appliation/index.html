@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Aggregator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1 onclick="reload()">News Hub</h1>
+                <li id="politics" onclick="navClick('politics')">Politics</li>
+                <li id="sports" onclick="navClick('sports')">Sports</li>
+                <li id="technology" onclick="navClick('technology')">Technology</li>
+            </div>
+            <br>
+            <div class="searchBar">
+                <input type="text" placeholder="Search Here.." value="" id="inputData">
+                <button id="searchBtn" onclick="searchNews()">Search</button>
+            </div>
+        </nav>
+        <main>
+            <div class="cardContainer" id="newsContainer">
+            </div>
+        </main>
+        <div class="category">
+            <h1 id="type"></h1>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="box">
+            <div class="left">
+                <div class="categories">
+                    <p>Categories</p>
+                    <div>
+                        <p onclick="fetchNewsByCategory('politics')">Politics</p>
+                    </div>
+                    <div>
+                        <p onclick="fetchNewsByCategory('sports')">Sports</p>
+                    </div>
+                    <div>
+                        <p onclick="fetchNewsByCategory('technology')">Technology</p>
+                    </div>
+                </div>
+                <div class="contactUs">
+                    <div class="contact">
+                        <p>Contact Us</p>
+                        <div>Phone No. - <span>9985831252</span></div>
+                        <div>Email - <span>chinnsmart125@gmail.com</span></div>
+                        <div>Address - <span>Andhrapradesh, India</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="newsletter">
+                    <p>Subscribe to Our Newsletter</p>
+                    <div class="email">
+                        <input type="email" placeholder="Enter Your Email Here" id="emailInput">
+                        <button onclick="subscribeNewsletter()">Subscribe</button>
+                    </div>
+                    <div id="subscriptionMessage"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyrights">
+            Copyrights &copy; 2024 News Hub
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
